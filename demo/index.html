@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HTcon Việt Nam - Gia sư chất lượng cao</title>
+  <meta name="description" content="HTcon - Nền tảng kết nối dạy và học. Gia sư giỏi, học thử 2 buổi, tìm nhanh 0-2 ngày." />
+
+  <!-- Google font (Roboto) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#ff6b00;
+      --dark:#222;
+      --muted:#666;
+      --bg:#fafafa;
+      --card:#fff;
+      --maxw:1100px;
+      --radius:10px;
+      font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+      color:var(--dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    header{
+      background:#fff;
+      border-bottom:1px solid #eee;
+      position:sticky;
+      top:0;
+      z-index:40;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ff9a3c);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.06)
+    }
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;align-items:center}
+    nav a{color:var(--dark);text-decoration:none;font-weight:500;font-size:15px}
+    .cta{background:var(--accent);color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+
+    /* hero */
+    .hero{
+      padding:36px 0 18px;
+      display:grid;
+      grid-template-columns:1fr 380px;
+      gap:28px;
+      align-items:start;
+    }
+    .hero-left h1{
+      margin:0 0 8px;
+      font-size:32px;
+      line-height:1.08;
+    }
+    .sub{color:var(--muted);margin-bottom:18px}
+    .features{display:flex;flex-wrap:wrap;gap:12px}
+    .feature{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04);flex:1 1 160px;min-width:160px}
+    .feature h4{margin:6px 0 4px;font-size:15px}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    /* signup card */
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(20,20,40,0.06);
+    }
+    .card h3{margin:0 0 8px}
+    .form-row{display:flex;gap:8px;margin-bottom:10px}
+    .form-row input,.form-row select{flex:1;padding:10px;border:1px solid #e6e6e6;border-radius:8px;font-size:14px}
+    .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+
+    /* sections */
+    section{padding:26px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .tutor-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .tutor{background:var(--card);padding:12px;border-radius:10px;border:1px solid #f0f0f0;display:flex;gap:12px;align-items:center}
+    .avatar{width:64px;height:64px;background:#eee;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#999;font-weight:700}
+
+    /* testimonials */
+    .testi{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .quote{padding:14px;background:linear-gradient(180deg,#fff,#fff);border-radius:10px;border:1px solid #f1f1f1}
+
+    /* footer */
+    footer{padding:22px 0;border-top:1px solid #eee;background:#fff}
+    .footer-grid{display:flex;gap:18px;flex-wrap:wrap}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr; padding:24px 0}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .testi{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+    @media (max-width:560px){
+      .grid-3{grid-template-columns:1fr}
+      .tutor-list{grid-template-columns:1fr}
+      .brand .logo{width:40px;height:40px;font-size:16px}
+    }
+
+    /* small utilities */
+    .muted{color:var(--muted);font-size:14px}
+    .small{font-size:13px;color:var(--muted)}
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <div class="logo">HT</div>
+        <div>
+          <div style="font-weight:700">HTcon Việt Nam</div>
+          <div class="small">Gia sư giỏi — Học thử 02 buổi</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="#">Phụ huynh</a></li>
+          <li><a href="#">Gia sư</a></li>
+          <li><a class="cta" href="#">Đăng ký</a></li>
+        </ul>
+      </nav>
+
+      <!-- mobile menu button -->
+      <div class="mobile-menu-btn" style="display:none"></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <div class="hero-left">
+        <h1>Gia sư giỏi — Có nghiệp vụ sư phạm</h1>
+        <p class="sub">Học thử 02 buổi. Chỉ 0–2 ngày để tìm gia sư phù hợp. Miễn phí tư vấn & đổi gia sư theo yêu cầu.</p>
+
+        <div class="features" aria-hidden>
+          <div class="feature">
+            <h4>CHẤT LƯỢNG</h4>
+            <p>Gia sư từ các trường TOP, hồ sơ minh bạch.</p>
+          </div>
+          <div class="feature">
+            <h4>NHANH CHÓNG</h4>
+            <p>Tìm gia sư phù hợp trong 0–2 ngày.</p>
+          </div>
+          <div class="feature">
+            <h4>MIỄN PHÍ</h4>
+            <p>Tư vấn và đổi gia sư hoàn toàn miễn phí.</p>
+          </div>
+          <div class="feature">
+            <h4>HỌC THỬ</h4>
+            <p>02 buổi học thử để đánh giá chất lượng.</p>
+          </div>
+        </div>
+
+        <section style="margin-top:18px">
+          <h3 style="margin-bottom:8px">Tìm gia sư theo môn</h3>
+          <div class="grid-3">
+            <div class="card">
+              <h4>Gia sư môn Toán</h4>
+              <p class="small">Toán cấp 1 → Đại học. GV & SV tuyển chọn.</p>
+            </div>
+            <div class="card">
+              <h4>Gia sư tiếng Anh</h4>
+              <p class="small">Gia sư ngoại ngữ, luyện thi, giao tiếp.</p>
+            </div>
+            <div class="card">
+              <h4>Gia sư môn Văn</h4>
+              <p class="small">Văn học, làm văn, luyện thi THPTQG.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Đăng ký nhận tư vấn miễn phí</h3>
+          <p class="small">Nhận tư vấn tìm gia sư phù hợp nhanh chóng.</p>
+          <div style="height:12px"></div>
+          <div class="form-row">
+            <input type="text" placeholder="Họ tên" id="name">
+          </div>
+          <div class="form-row">
+            <input type="tel" placeholder="Số điện thoại" id="phone">
+          </div>
+          <div class="form-row">
+            <select id="subject">
+              <option>Chọn môn học</option>
+              <option>Toán</option>
+              <option>Tiếng Anh</option>
+              <option>Vật lý</option>
+            </select>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <a href="#" class="btn-primary" id="submitBtn">ĐĂNG KÝ NGAY</a>
+            <div class="small muted">Hoặc gọi: <strong>0987.115.131</strong></div>
+          </div>
+          <p class="small" style="margin-top:10px">Cam kết: Học thử 02 buổi. Tiến bộ sau 10 buổi.</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="container">
+      <section>
+        <h3>Đội ngũ gia sư HTcon</h3>
+        <p class="muted">Gia sư: Sinh viên, giáo viên, cử nhân, người nước ngoài có kinh nghiệm.</p>
+
+        <div class="tutor-list" style="margin-top:12px">
+          <div class="tutor">
+            <div class="avatar">TV</div>
+            <div>
+              <div style="font-weight:600">Nguyễn Văn A</div>
+              <div class="small muted">Gia sư Toán — ĐH Bách Khoa</div>
+            </div>
+          </div>
+
+          <div class="tutor">
+            <div class="avatar">LN</div>
+            <div>
+              <div style="font-weight:600">Lê Nguyễn</div>
+              <div class="small muted">Gia sư Tiếng Anh — TOEIC 960</div>
+            </div>
+          </div>
+
+          <div class="tutor">
+            <div class="avatar">PT</div>
+            <div>
+              <div style="font-weight:600">Phạm Thùy</div>
+              <div class="small muted">GV Ngữ Văn — Có nghiệp vụ sư phạm</div>
+            </div>
+          </div>
+
+          <div class="tutor">
+            <div class="avatar">HT</div>
+            <div>
+              <div style="font-weight:600">Hoàng Trung</div>
+              <div class="small muted">Gia sư Vật Lý — Luyện thi</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Đánh giá của khách hàng</h3>
+        <div class="testi" style="margin-top:12px">
+          <div class="quote">
+            <strong>Quỳnh Seitan</strong>
+            <p class="small muted">"Trung tâm uy tín, hướng dẫn kỹ lưỡng. Gia sư nhiệt tình."</p>
+            <div class="small">Hà Nội</div>
+          </div>
+          <div class="quote">
+            <strong>Thu Vũ</strong>
+            <p class="small muted">"Phòng hỗ trợ linh hoạt khi thay đổi lớp, hợp đồng rõ ràng."</p>
+            <div class="small">Nam Định</div>
+          </div>
+        </div>
+        <div style="margin-top:12px" class="small muted">Xem thêm đánh giá trên fanpage.</div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap">
+        <div style="max-width:420px">
+          <h4 style="margin:0 0 6px">HTCON EDU</h4>
+          <div class="small muted">TP.HCM: 30/1 Đường Cách Mạng Tháng 8, P.15, Q.10</div>
+          <div class="small muted">Hà Nội: 125 Đường Mỹ Đình, Q. Nam Từ Liêm</div>
+          <div style="height:8px"></div>
+          <div class="small">Email: <a href="mailto:htcon.vn@gmail.com">htcon.vn@gmail.com</a> • Hotline: 0987115131</div>
+        </div>
+
+        <div style="text-align:right" class="small muted">
+          <div>Giờ làm việc: 08:00 - 22:00</div>
+          <div style="margin-top:6px">© <span id="year"></span> HTcon.vn</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // demo submit (client-side only)
+    document.getElementById('submitBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const subject = document.getElementById('subject').value;
+      if(!name || !phone){
+        alert('Vui lòng nhập họ tên và số điện thoại để nhận tư vấn.');
+        return;
+      }
+      // In thực tế bạn sẽ gửi POST tới API backend.
+      alert('Cảm ơn ' + name + '! Yêu cầu của bạn đã được ghi nhận. Chúng tôi sẽ liên hệ sớm.');
+      // reset (optional)
+      document.getElementById('name').value='';
+      document.getElementById('phone').value='';
+      document.getElementById('subject').selectedIndex=0;
+    });
+  </script>
+</body>
+</html>
