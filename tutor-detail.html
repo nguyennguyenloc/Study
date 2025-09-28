@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chi tiết gia sư — HTcon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent:#ff6b00;
+      --dark:#222;
+      --muted:#666;
+      --bg:#fafafa;
+      --card:#fff;
+      --maxw:800px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;padding:0;background:var(--bg);font-family:"Roboto",sans-serif;color:var(--dark);}
+    .container{max-width:var(--maxw);margin:0 auto;padding:16px;}
+    header{background:#fff;padding:12px 0;border-bottom:1px solid #eee;}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{
+      width:300px;height:146px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ff9a3c);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.06)
+    }
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:16px}
+    nav a{color:var(--dark);text-decoration:none;font-weight:500}
+
+    .profile{display:flex;gap:24px;margin-top:24px;flex-wrap:wrap;}
+    .profile-left{flex:0 0 180px;text-align:center;}
+    .profile-left img, .profile-left .avatar{
+      width:160px;height:160px;border-radius:12px;background:#eee;
+      object-fit:cover;
+      display:flex;align-items:center;justify-content:center;color:#999;font-size:28px;
+    }
+    .profile-right{flex:1;}
+    .profile-right h2{margin-top:0;}
+    .info-row{margin:8px 0;}
+    .info-row strong{display:inline-block;width:120px;}
+    .bio{margin-top:16px;padding:14px;background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04);}
+
+    .btn-contact{display:inline-block;margin-top:16px;padding:10px 18px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;}
+
+    @media(max-width:600px){
+      .profile{flex-direction:column;align-items:center;}
+      .profile-left, .profile-right{width:100%;}
+      .info-row strong{width:100px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <img class="logo" src="logo.jpg" alt="" srcset="">
+      </div>
+      <nav style="margin-top:10px">
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="tutors.html">Gia sư</a></li>
+          <li><a href="#">Phụ huynh</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="index.html" style="color:var(--accent);text-decoration:none;">← Quay lại danh sách</a>
+
+    <div class="profile">
+      <div class="profile-left">
+        <div class="avatar">NV</div>
+        <!-- nếu có ảnh thật thì: <img src="..." alt="Gia sư Nguyễn Văn A"> -->
+      </div>
+      <div class="profile-right">
+        <h2>Nguyễn Văn A</h2>
+        <div class="info-row"><strong>Chuyên môn:</strong> Tin học</div>
+        <div class="info-row"><strong>Trình độ học vấn:</strong> Đại học Bách Khoa</div>
+        <div class="info-row"><strong>Kinh nghiệm:</strong> 3 năm giảng dạy</div>
+        <div class="info-row"><strong>Đánh giá:</strong> ★★★★☆ (4.8/5)</div>
+
+        <div class="bio">
+          <p><strong>Giới thiệu:</strong> Tôi là Nguyễn Văn A, cử nhân Tin Đại học Bách Khoa. Tôi đã giảng dạy kèm các bạn học sinh THCS/THPT hơn 3 năm, tập trung vào nâng cao tư duy, kỹ năng làm bài và luyện thi.</p>
+          <p><strong>Phong cách dạy:</strong> Tập trung phân tích kỹ lưỡng từng dạng bài, chia nhỏ kiến thức, luyện đề và phản hồi theo tiến bộ học sinh.</p>
+        </div>
+
+        <a href="#" class="btn-contact">Liên hệ & đăng ký học</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
